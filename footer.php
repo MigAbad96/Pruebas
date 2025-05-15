@@ -1,3 +1,4 @@
+<?php $template_uri = get_bloginfo('template_url'); ?>
 
     <!-- Footer -->
     <footer id="contacto">
