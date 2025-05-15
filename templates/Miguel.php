@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php /* Template Name: Miguel Abad */
+get_header();
+$template_uri = get_bloginfo('template_url'); ?>
+
 
     <!-- Hero Banner -->
     <section class="hero" id="inicio">
