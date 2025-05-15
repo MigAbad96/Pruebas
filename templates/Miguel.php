@@ -4,11 +4,13 @@ $template_uri = get_bloginfo('template_url'); ?>
 
 
     <!-- Hero Banner -->
-    <section class="hero" id="inicio">
+    <section class="hero" id="inicio" style="background-image: url('<?php the_field('imagen_banner') ?>');">
         <div class="hero-content">
-            <h2>¡Somos tu camino al éxito!</h2>
-            <p>Obtén tu grado de Bachiller y Título a nombre de la Nación en solo dos años. Instituto licenciado por el MINEDU.</p>
-           <a href="form.html" class="btn">¡Inscríbete ahora!</a>
+            <h2><?php the_field('titulo_banner') ?></h2>
+            <p><?php the_field('texto_acompañante') ?></p>
+
+           <a href="<?php the_field('boton_1') ?>" class="btn">¡Inscríbete ahora!</a>
+
         </div>
     </section>
 
