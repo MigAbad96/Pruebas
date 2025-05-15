@@ -2,17 +2,17 @@
 get_header();
 $template_uri = get_bloginfo('template_url'); ?>
 
-
+<?php if(get_field('ver_1') == true) { ?>
     <!-- Hero Banner -->
-    <section class="hero" id="inicio" style="background-image: url('<?php the_field('imagen_banner') ?>');">
+    <section class="hero" id="inicio" style="background-image: url('<?php the_field('imagen_del_banner') ?>');">
         <div class="hero-content">
             <h2><?php the_field('titulo_banner') ?></h2>
             <p><?php the_field('texto_acompañante') ?></p>
-
-           <a href="<?php the_field('boton_1') ?>" class="btn">¡Inscríbete ahora!</a>
+            <a href="<?php the_field('boton_1') ?>" class="btn">¡Inscríbete ahora!</a>
 
         </div>
     </section>
+<?php } ?>
 
     <!-- Sección Carreras -->
     <section class="carreras" id="carreras">
