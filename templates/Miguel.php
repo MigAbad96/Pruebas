@@ -92,9 +92,9 @@ $template_uri = get_bloginfo('template_url'); ?>
                 <p><?php the_field('Texto')?></p>
             </div>
 
-            <?php if( have_rows( 'talleres') ) {
+            <?php if( have_rows( 'talleres') ) {  ?>
                 <div class="talleres-grid">
-                while( have_rows( 'talleres') ) { the_row();?>
+                <?php while( have_rows( 'talleres') ) { the_row();?>
 
                     <div class="taller-card">
                         <div class="taller-img">
