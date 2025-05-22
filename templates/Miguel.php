@@ -13,6 +13,7 @@ $template_uri = get_bloginfo('template_url'); ?>
         </div>
     </section>
 <?php } ?>
+<?php if(get_field('ver_02') == true) { ?>
 
     <!-- Sección Carreras -->
     <section class="carreras" id="carreras">
@@ -79,6 +80,9 @@ $template_uri = get_bloginfo('template_url'); ?>
             </div>
         </div>
     </section>
+
+<?php } ?>
+<?php if(get_field('ver_03') == true) { ?>
 
     <!-- Talleres -->
     <section class="talleres" id="talleres">
@@ -152,6 +156,9 @@ $template_uri = get_bloginfo('template_url'); ?>
         </div>
     </section>
 
+<?php } ?>
+<?php if(get_field('ver_04') == true) { ?>
+
     <!-- Información -->
     <section class="info" id="quienes-somos">
         <div class="container">
@@ -177,5 +184,6 @@ $template_uri = get_bloginfo('template_url'); ?>
             </div>
         </div>
     </section>
+<?php } ?>
 
 <?php get_footer(); ?>
