@@ -33,7 +33,6 @@
                         <li><a href="index.html" class="active">Inicio</a></li>
                         <li><a href="https://campusismem.com/">Campus Virtual</a></li>
                         <li><a href="bibli.html">Biblioteca Virtual</a></li>
-                        <li><a href="egre.html">Portal Egresados</a></li>
                         <li><a href="trab.html">Bolsa de Trabajo</a></li>
                     </ul>
                 </nav>
