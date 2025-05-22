@@ -5,6 +5,7 @@ function Miguel() {
     ini_set('display_errors', 1);
 	ini_set('display_startup_errors', 1);
 	error_reporting(E_ALL);
+	
     if (function_exists('acf_add_options_page')) {
         $parent = acf_add_options_page(array(
             'page_title' 	=> 'Configuración',
