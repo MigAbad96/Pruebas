@@ -19,65 +19,46 @@ $template_uri = get_bloginfo('template_url'); ?>
     <section class="carreras" id="carreras">
         <div class="container">
             <div class="section-title">
-                <h2>Nuestras Carreras Profesionales</h2>
-                <p>Programas académicos licenciados por el MINEDU</p>
+                <h2><?php the_field('titulo_carreras') ?></h2>
+                <p><?php the_field('descripcion_carreras') ?></p>
             </div>
-            
-            <div class="carreras-grid">
-                <!-- Carrera 1 -->
-                <div class="carrera-card">
-                    <div class="carrera-img">
-                        <img src="img/desa.jpg" alt="Desarrollo de Sistemas de Información">
-                    </div>
-                    <div class="carrera-content">
-                        <h3>Desarrollo de Sistemas de Información</h3>
-                        <p>Formamos profesionales capaces de analizar, diseñar, desarrollar e implementar sistemas informáticos para optimizar procesos en las organizaciones. Aprenderás programación, bases de datos, desarrollo web y móvil, redes y seguridad informática.</p>
+
+
+             <?php if( have_rows( 'carreras') ) {  ?>
+                <div class="carreras-grid">
+                <?php while( have_rows( 'carreras') ) { the_row();
+                    $carreras_id = get_field('carreras');
+                    $title = get_the_title($carreras_id);?>
                         
-                        <div class="carrera-meta">
-                            <div class="meta-item">
-                                <i class="fas fa-clock"></i>
-                                <span>Duración: 2 años (6 ciclos académicos)</span>
-                            </div>
-                            <div class="meta-item">
-                                <i class="fas fa-certificate"></i>
-                                <span>Título a nombre de la Nación</span>
-                            </div>
-                            <div class="meta-item">
-                                <i class="fas fa-briefcase"></i>
-                                <span>Alta demanda laboral</span>
-                            </div>
+                    <!-- Carrera 1 -->
+                    <div class="carrera-card">
+                        <div class="carrera-img">
+                            <img src="img/desa.jpg" alt="Desarrollo de Sistemas de Información">
                         </div>
-                        <a href="admi.html" class="btn">Ver detalles</a>
-                    </div>
-                </div>
-                
-                <!-- Carrera 2 -->
-                <div class="carrera-card">
-                    <div class="carrera-img">
-                        <img src="img/con.jpg" alt="Contabilidad">
-                    </div>
-                    <div class="carrera-content">
-                        <h3>Contabilidad</h3>
-                        <p>Formamos profesionales capaces de gestionar los procesos contables y financieros de las organizaciones. Aprenderás contabilidad general, costos, tributación, auditoría, finanzas y gestión empresarial con herramientas tecnológicas actualizadas.</p>
-                        
-                        <div class="carrera-meta">
-                            <div class="meta-item">
-                                <i class="fas fa-clock"></i>
-                                <span>Duración: 2 años (6 ciclos académicos)</span>
+                        <div class="carrera-content">
+                            <h3><?php echo $title;  ?></h3>
+                            <p><?php the_content('$carreras_id')  ?></p>
+                            
+                            <div class="carrera-meta">
+                                <div class="meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span><?php the_field('','$carreras_id')  ?></span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Título a nombre de la Nación</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span>Alta demanda laboral</span>
+                                </div>
                             </div>
-                            <div class="meta-item">
-                                <i class="fas fa-certificate"></i>
-                                <span>Título a nombre de la Nación</span>
-                            </div>
-                            <div class="meta-item">
-                                <i class="fas fa-briefcase"></i>
-                                <span>Amplio campo laboral</span>
-                            </div>
+                            <a href="admi.html" class="btn">Ver detalles</a>
                         </div>
-                           <a href="admi.html" class="btn">Ver detalles</a>
                     </div>
-                </div>
+                <?php } ?>
             </div>
+            <?php } ?>
         </div>
     </section>
 
