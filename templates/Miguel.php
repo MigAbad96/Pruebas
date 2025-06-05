@@ -13,56 +13,7 @@ $template_uri = get_bloginfo('template_url'); ?>
         </div>
     </section>
 <?php } ?>
-<?php if(get_field('ver_02') == true) { ?>
 
-    <!-- Sección Carreras -->
-    <section class="carreras" id="carreras">
-        <div class="container">
-            <div class="section-title">
-                <h2><?php the_field('titulo_carreras') ?></h2>
-                <p><?php the_field('descripcion_carreras') ?></p>
-            </div>
-
-
-             <?php if( have_rows( 'carreras') ) {  ?>
-                <div class="carreras-grid">
-                <?php while( have_rows( 'carreras') ) { the_row();
-                    $carreras_id = get_field('carreras');
-                    $title = get_the_title($carreras_id);?>
-                        
-                    <!-- Carrera 1 -->
-                    <div class="carrera-card">
-                        <div class="carrera-img">
-                            <img src="img/desa.jpg" alt="Desarrollo de Sistemas de Información">
-                        </div>
-                        <div class="carrera-content">
-                            <h3><?php echo $title;  ?></h3>
-                            <p><?php the_content('$carreras_id')  ?></p>
-                            
-                            <div class="carrera-meta">
-                                <div class="meta-item">
-                                    <i class="fas fa-clock"></i>
-                                    <span><?php the_field('','$carreras_id')  ?></span>
-                                </div>
-                                <div class="meta-item">
-                                    <i class="fas fa-certificate"></i>
-                                    <span>Título a nombre de la Nación</span>
-                                </div>
-                                <div class="meta-item">
-                                    <i class="fas fa-briefcase"></i>
-                                    <span>Alta demanda laboral</span>
-                                </div>
-                            </div>
-                            <a href="admi.html" class="btn">Ver detalles</a>
-                        </div>
-                    </div>
-                <?php } ?>
-            </div>
-            <?php } ?>
-        </div>
-    </section>
-
-<?php } ?>
 <?php if(get_field('ver_03') == true) { ?>
 
     <!-- Talleres -->
